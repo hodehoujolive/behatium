@@ -1,0 +1,43 @@
+default:
+  autoload:
+    - '%paths.base%/features/bootstrap/'
+  suites:
+    ui:
+      paths:
+        features: features/myFeatures/
+      contexts:
+        - 'FeatureContext':
+        - 'WebContext':
+            parameters:
+              path_failed: '%paths.base%/reports/Screen/Failed/'
+              path_successed: '%paths.base%/reports/Screen/Success/'
+      filters: { tags: '@ui' }
+
+  formatters:
+        pretty:
+          output_path: null
+        html:
+          output_path: '%paths.base%/reports'
+  extensions:
+      Behat\MinkExtension:
+        base_url: http://google.fr/
+        browser_name: firefox
+        default_session: goutte
+        show_cmd: 'open %s'
+        javascript_session: selenium2
+        goutte: ~
+        selenium2:
+          wd_host: http://localhost:4444/wd/hub
+          browser: firefox
+          capabilities: {'browser':'firefox', 'marionette':true}
+      elkan\BehatFormatter\BehatFormatterExtension:
+        projectName: Automated Test
+        projectDescription: test
+        projectImage: features/logo.png
+        name: html
+        renderer: Twig
+        file_name: Index
+        print_args: true
+        print_outp: true
+        loop_break: true
+        show_tags: true

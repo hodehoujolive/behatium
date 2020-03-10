@@ -1,0 +1,21 @@
+{
+    "name": "automatedtest/behat",
+    "description": "AutomatedTest",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Donou Dario",
+            "email": "donoudario63@gmail.com"
+        }
+    ],
+    "require": {
+        "behat/behat":"*",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*",
+        "dmore/chrome-mink-driver": "^2.0@dev",
+        "behat/mink": "^1.7@dev",
+        "twig/twig": "~1.0",
+        "elkan/behatformatter": "v1.0.*"
+    }
+}
