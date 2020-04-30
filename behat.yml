@@ -20,7 +20,7 @@ default:
           output_path: '%paths.base%/reports'
   extensions:
       Behat\MinkExtension:
-        base_url: http://google.fr/
+        base_url: https://getbootstrap.com/
         browser_name: firefox
         default_session: goutte
         show_cmd: 'open %s'
