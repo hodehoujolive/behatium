@@ -281,4 +281,265 @@ Remplir le champ grace à son aria-describedby et sa class
 * $arg1 : aria-describedby
 * $arg2 : class
 * $arg3 : value
-* 
+
+```
+Then I filled the aria-describedby "field_describedby" and class "field_class" field with "my new project"
+```
+
+## I filled the arial-label :arg1 field with :arg2
+
+Remplir le champ grace à son aria-label
+
+* $arg1 : aria-label
+* $arg2 : value
+
+```
+Then I filled the arial-label "Gitlab" field with "projects"
+```
+
+## I filled the arial-label :arg1 and class :arg2 field with :arg3
+
+Remplir le champ grace à son aria-label et sa class
+
+* $arg1 : aria-label
+* $arg2 : class
+* $arg2 : value
+
+```
+I filled the arial-label "Gitlab" and class "field_class" field with "project"
+```
+
+## I filled the arial-label :arg1 and placeholder :arg2 field with :arg3
+
+Remplir un champ grace à son aria-label et son placeholder
+
+* $arg1 : aria-label
+* $arg2 : placeholder
+* $arg3 : value
+
+```
+Then I filled the arial-label "Gitlab" and placeholder "Gitlab placeholder" field with "project"
+```
+
+## I click button with class :arg1
+
+Cliquer sur un button grace à sa class
+
+* $arg1 : class
+
+```
+And I click button with class "button_class"
+```
+
+## I click button with aria-label :arg1
+
+Cliquer sur un button grace à son aria-label
+
+* $arg1 : aria-label
+
+```
+And I click button with aria-label "Slack"
+```
+
+## I click button with href :arg1
+
+Cliquer sur un button grace à son href
+
+* $arg1 : href
+
+```
+And I click button with href "#slack"
+```
+
+## I click button with data-toggle :arg1
+
+Cliquer sur button grace à son data-toggle
+
+* $arg1 : data-toggle
+
+```
+And I click button with data-toggle "collapse"
+```
+
+## I click button with value :arg1 and class :arg2
+
+Cliquer sur un button grace à sa value et sa class
+
+* $arg1 : value
+* $arg2 : class
+
+```
+And I click button with value "Envoyer" and class "button_class"
+```
+
+## I click button with href :arg1 and class :arg2
+
+Cliquer sur le button grace à son href et sa class
+
+* $arg1 : href
+* $arg2 : class
+
+```
+And I click button with href "/send/message" and class "button_class"
+```
+
+## I click button with href :arg1 and value :arg2
+
+Cliquer sur un button grace à son href et sa value
+
+* $arg1 : href
+* $arg2 :  value
+
+```
+And I click button with href "/send/message" and value "Envoyer"
+```
+
+## I click button with href :arg1 and type :arg2
+
+Cliquer sur un button grace à son href et sa value
+
+* $arg1 : href
+* $arg2 : type
+
+```
+And I click button with href "/send/message" and type "submit"
+```
+
+## I click button with type :arg1 and class :arg2
+
+Cliquer sur un button grace à son type et sa class
+
+* $arg1 : type
+* $arg1 : class
+
+```
+And I click button with type "submit" and class "button_class"
+```
+
+## I click button with class :arg1 and value :arg2 and type :arg3
+
+Cliquer sur un button grace à sa class , sa value et son type
+
+* $arg1 : class
+* $arg2 : value
+* $arg3 : type
+
+```
+And I click button with class "button_class" and value "Envoyer" and type "submit"
+```
+
+## I click label with href :arg1
+
+Cliquer sur un label à grace à son href
+
+* $arg1 : href
+
+```
+And I click label with href "/message/send"
+```
+
+## I click label with class :arg1
+
+Cliquer sur un label grace à sa class
+
+* $arg1 : class
+
+```
+And I click label with class "label_class"
+```
+
+## I click input with type :arg1 and name :arg2 and id :arg3
+
+Cliquer sur un input grace à son type , son name et son id
+
+* $arg1 : type
+* $arg2 : name
+* $arg3 : id
+
+```
+And I click input with type "button" and name "commit changes" and id "input_id"
+```
+
+## I click input with class :arg1 and type :type and id :arg2
+
+Cliquer sur un input grace à sa class, son type et son id
+
+* $arg1 : class
+* $arg2 : type
+* $arg3 : id
+
+```
+And I click input with class "input_id" and type "button" and id "input_id"
+```
+
+## I click input with id :arg1 and type :arg2
+
+Cliquer sur un input grace à son id et son type
+
+* $arg1 : id
+* $arg2 : type
+
+```
+And I click input with id "input_id" and type "button"
+```
+
+## I click input with name :arg1
+
+Cliquer sur un button grace à son name
+
+* $arg1 : name
+
+```
+And I click input with name "Envoyer"
+```
+
+## I click input with value :arg1
+
+Cliquer sur un input grace à sa value
+
+* $arg1 : value
+
+```
+And I click input with value "Envoyer"
+```
+
+## I click input with type :arg1
+
+Cliquer sur un input grace à son type
+
+* $arg1 : type
+
+```
+I click input with type "button"
+```
+
+## I click input with value :arg1 and type :arg2
+
+Cliquer sur un input grace à sa value et son type
+
+* $arg1 : value
+* $arg2 : type
+
+```
+And I click input with value "Envoyer" and type "button"
+```
+
+## I click span with class :arg1
+
+Cliquer sur un span grace à sa class
+
+* $arg1 : class
+
+```
+And I click span with class "span_class"
+```
+
+## I click li with data-target :arg1
+
+Cliquer sur un li grace à son data-target
+
+* $arg1 : data-target
+
+```
+And I click li with data-target "attributes"
+```
