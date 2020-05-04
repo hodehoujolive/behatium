@@ -104,36 +104,127 @@ default:
 
 ## Actions
 
-## I wait for :secondes seconds
+## I wait for :arg1 seconds
 
 Attendre n secondes
+
+* $arg1 : secondes
+
 ```
 And I wait for "5" seconds
-
 ```
 
 ## I click link with href :arg1
 
 Cliquer sur un lien grace à son href
 
-* $arg1 est le href du lien
+* $arg1 : href
 
 ```
-And I click link with href "https://gitlab.com/openware/automatisation-des-tests/-/edit/developer/README.md"
-
+And I click link with href "#link_href"
 ```
 
 ## I click link with class :arg1
 
 Cliquer sur un lien grace à sa classe
 
-* $arg1 est la class du lien
+* $arg1 : class
 
 ```
-And I click link with href "btn btn-primary my-2"
-
+And I click link with href "link_class"
 ```
 
+## I click link with href :arg1 and class :arg2
 
+Cliquer sur le lien grace à son href et sa class
 
+* $arg1 : href
+* $arg2 : class
 
+```
+And I click link with href "#link_href" and class "link_class"
+```
+
+## I click link with href :arg1 and role :arg2
+
+Cliquer sur le lien grace à son href et son role
+
+* $arg1 : href
+* $arg2 : role
+
+```
+And I click link with href "#link_href" and role "link_role"
+```
+
+## I click link with value :arg1
+
+Cliquer sur le lien grace à sa valeur
+
+* $arg1 : value
+
+```
+And I click link with value "link_value"
+```
+
+## I click link with value :arg1 and class :arg2
+
+Cliquer sur le lien grace à sa valeur et sa class
+
+* $arg1 : value
+* $arg2 : class
+
+```
+And I click link with value "link_value" and class "link_class"
+```
+
+## I click link with id :arg1 and href :arg2
+
+Cliquer sur le lien grace à son id et son href
+
+* $arg1 : id
+* $arg2 : href
+
+```
+And I click link with id "link_id" and href "#link_href"
+```
+
+## I click link with arial-label :arg1
+
+Cliquer sur un lien grace à son aria-label
+
+* $arg1 : aria-label
+
+```
+I click link with arial-label "link_arial_label"
+```
+
+## I click select with class :arg1
+
+Cliquer sur un select grace à sa class
+
+* $arg1 : class
+
+```
+And I click select with class "select_class"
+```
+
+## I click select with id :arg1
+
+Cliquer sur un select grace à son id
+
+* $arg1 : id
+
+```
+And I click select with id "select_id"
+```
+
+## I click select with class :arg1 and id :arg2
+
+Cliquer sur un select grace à sa class et son id
+
+* $arg1 : class
+* $arg2 : id
+
+```
+$ And I click select with class "select_class" and id "select_id"
+```
