@@ -1,4 +1,4 @@
-#behat-starter-kit
+# behat-starter-kit
 **Pour des références supplémentaires, veuillez consulter [source](https://gitlab.com/openware/automatisation-des-tests/-/edit/developer/features/bootstrap/WebContext.php)**
 
 Utilise Mink pour lancer et manipuler Selenium Server.
@@ -21,7 +21,7 @@ Pour utiliser ce module avec Composer, vous avez besoin des packages :
 ```
 </div>
 
-##Installation 
+## Installation 
 
 Lancez donc `composer install` dans votre terminal à la racine du projet.
 
@@ -30,7 +30,8 @@ Pour les liens, boutons, champs, vous pouvez utiliser les name / value / id  / a
 Pour les champs de formulaire, vous pouvez utiliser le nom ou aria-describedby / type / placeholder / id.
 
 
-Placer vous dans le repertoire server 
+Placer vous dans le repertoire server et taper `./run.sh`
+Ensuite à la racine `vendor/bin/behat`
 
 ## Status
 
@@ -38,5 +39,72 @@ Placer vous dans le repertoire server
 * Stability: **stable**
 * Contact: jolive.hodehou@openware.online
 * relies on [Mink](http://mink.behat.org)
+
+## Configuration
+
+* url *required* - start url for your app
+* browser *required* - browser that would be launched
+* host  - Selenium server host (localhost by default)
+* port - Selenium server port (4444 by default)
+* delay - set delay between actions in milliseconds (1/1000 of second) if they run too fast
+
+### Example (`behat.yml`)
+
+```
+default:
+  autoload:
+    - '%paths.base%/features/bootstrap/'
+  suites:
+    ui:
+      paths:
+        features: features/myFeatures/
+      contexts:
+        - 'FeatureContext':
+        - 'WebContext':
+            parameters:
+              path_failed: '%paths.base%/reports/Screen/Failed/'
+              path_successed: '%paths.base%/reports/Screen/Success/'
+      filters: { tags: '@ui' }
+
+  formatters:
+        pretty:
+          output_path: null
+        html:
+          output_path: '%paths.base%/reports'
+  extensions:
+      Behat\MinkExtension:
+        base_url: https://getbootstrap.com/
+        browser_name: firefox
+        default_session: goutte
+        show_cmd: 'open %s'
+        javascript_session: selenium2
+        goutte: ~
+        selenium2:
+          wd_host: http://localhost:4444/wd/hub
+          browser: firefox
+          capabilities: {'browser':'firefox', 'marionette':true}
+      elkan\BehatFormatter\BehatFormatterExtension:
+        projectName: Automated Test
+        projectDescription: test
+        projectImage: features/logo.png
+        name: html
+        renderer: Twig
+        file_name: Index
+        print_args: true
+        print_outp: true
+        loop_break: true
+        show_tags: true
+
+
+```
+             
+## Public Properties
+
+* session - contains Mink Session
+
+## Actions
+
+
+
 
 
