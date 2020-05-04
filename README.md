@@ -226,5 +226,59 @@ Cliquer sur un select grace à sa class et son id
 * $arg2 : id
 
 ```
-$ And I click select with class "select_class" and id "select_id"
+And I click select with class "select_class" and id "select_id"
 ```
+
+## I filled the id :arg1 field with :arg2
+
+Remplir le champ grace à son id
+
+* $arg1 : id
+* $arg2 : value
+
+```
+Then I filled the id "field_id" field with "jolivé hodehou"
+```
+
+## I filled the type :arg1 field with :arg2
+
+Remplir le champ grace à son type
+
+* $arg1 : id
+* $arg2 : value
+
+```
+Then I filled the type "password" field with "MotDePasse"
+```
+
+## I filled the placeholder :field field with :value
+
+Remplir le champ grace à son placeholder
+
+* $arg1 : placeholder
+* $arg2 : value
+
+```
+Then I filled the placeholder "username" field with "hikari"
+```
+
+##  I filled the placeholder :arg1 and class :arg2 field with :arg3
+
+Remplir le champ grace à son placeholder et sa class
+
+* $arg1 : placeholder
+* $arg2 : class
+* $arg3 : value
+
+```
+Then I filled the placeholder "username" and class "field_class" field with "hikari"
+```
+
+## I filled the aria-describedby :arg1 and class :arg2 field with :arg3
+
+Remplir le champ grace à son aria-describedby et sa class
+
+* $arg1 : aria-describedby
+* $arg2 : class
+* $arg3 : value
+* 
