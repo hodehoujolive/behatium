@@ -7,7 +7,9 @@ Utilise Mink pour lancer et manipuler Selenium Server.
 
 <div class="alert alert-info">
 Pour utiliser ce module avec Composer, vous avez besoin des packages 
-    "require": {
+
+```
+"require": {
         "behat/behat":"*",
         "behat/mink-extension": "*",
         "behat/mink-goutte-driver": "*",
@@ -18,4 +20,7 @@ Pour utiliser ce module avec Composer, vous avez besoin des packages
         "elkan/behatformatter": "v1.0.*",
         "psr/container": "^1.0"
     }
+```
 </div>
+Lancez donc `composer install` dans votre terminal à la racine du projet.
+
