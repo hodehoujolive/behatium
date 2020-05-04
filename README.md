@@ -104,6 +104,35 @@ default:
 
 ## Actions
 
+## I wait for :secondes seconds
+
+Attendre n secondes
+```
+And I wait for "5" seconds
+
+```
+
+## I click link with href :arg1
+
+Cliquer sur un lien grace à son href
+
+* $arg1 est le href du lien
+
+```
+And I click link with href "https://gitlab.com/openware/automatisation-des-tests/-/edit/developer/README.md"
+
+```
+
+## I click link with class :arg1
+
+Cliquer sur un lien grace à sa classe
+
+* $arg1 est la class du lien
+
+```
+And I click link with href "btn btn-primary my-2"
+
+```
 
 
 
