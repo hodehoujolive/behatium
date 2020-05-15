@@ -3,11 +3,12 @@ Feature: examples
 
   Background:
     Given I am on the homepage
-    And I click link with href "/docs/4.4/examples/" and class "nav-link "
+    And I click link with href "/docs/4.5/examples/" and class "nav-link "
 
   @javascript
   Scenario: Sign In
-    And I click link with href "/docs/4.4/examples/sign-in/"
+    And I wait for "5" seconds
+    And I click link with href "/docs/4.5/examples/sign-in/"
     And I wait for "5" seconds
     And I filled the placeholder "Email address" field with "Jolivehodehou7@gmail.com"
     And I wait for "2" seconds
@@ -20,14 +21,16 @@ Feature: examples
 
       @javascript
   Scenario: Album
-    And I click link with href "/docs/4.4/examples/album/"
+    And I wait for "5" seconds
+    And I click link with href "/docs/4.5/examples/album/"
     And I wait for "5" seconds
     And I click button with aria-label "Toggle navigation"
     And I click link with class "btn btn-primary my-2"
 
           @javascript
   Scenario: Checkout
-    And I click link with href "/docs/4.4/examples/checkout/"
+    And I wait for "5" seconds
+    And I click link with href "/docs/4.5/examples/checkout/"
     And I wait for "5" seconds
     And I filled the id "firstName" field with "Jolivé"
     And I filled the id "lastName" field with "Hodehou"
