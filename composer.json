@@ -4,8 +4,8 @@
     "license": "proprietary",
     "authors": [
         {
-            "name": "Donou Dario",
-            "email": "donoudario63@gmail.com"
+            "name": "HODEHOU Jolivé",
+            "email": "jolive.hodehou@openware.online"
         }
     ],
     "require": {
@@ -16,6 +16,7 @@
         "dmore/chrome-mink-driver": "^2.0@dev",
         "behat/mink": "^1.7@dev",
         "twig/twig": "~1.0",
-        "elkan/behatformatter": "v1.0.*"
+        "elkan/behatformatter": "v1.0.*",
+        "psr/container": "^1.0"
     }
 }
