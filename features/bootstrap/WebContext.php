@@ -90,6 +90,7 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
         $element->click();
     }
 
+
                 /**
      * @When I click link with class :arg1
      */
@@ -221,6 +222,21 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
         
     }
 
+                            /**
+     * @When I click link with class :class and title :title
+     */
+    public function iClickLinkWithClassAndTitle($arg1,$arg2)
+    {
+
+        $session = $this->getSession();
+        $element = $session->getPage()->find(
+            'xpath',
+            $session->getSelectorsHandler()->selectorToXpath('xpath', "//a[@class='{$arg1}'][@title='{$arg2}']")
+        );
+        $element->click();
+        
+    }
+
         /**
      * @Given I click link with arial-label :arg1
      */
@@ -236,9 +252,10 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
 
 
         /**
-     * @When I filled the class :field field with :value
+     * @When I fill the input of class :class with the value :value
+     * 
      */
-    public function IfilledTheClassFieldWithValue($field, $value)
+    public function InputClassValue($field, $value)
     {
         $session = $this->getSession();
         $element = $session->getPage()->find(
@@ -249,9 +266,23 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
     }
 
             /**
-     * @When I filled the id :field field with :value
+     * @When I fill the textarea of id :id with the value :value
+     * 
      */
-    public function IfilledTheIdFieldWithValue($field, $value)
+    public function TextareaIdValue($field, $value)
+    {
+        $session = $this->getSession();
+        $element = $session->getPage()->find(
+            'xpath',
+            $session->getSelectorsHandler()->selectorToXpath('xpath', "//textarea[@id='{$field}']")
+        );
+        $element->setValue($value);
+    }
+
+            /**
+     * @When I fill the input of id :id with the value :value
+     */
+    public function InputIdValue($field, $value)
     {
         $session = $this->getSession();
         $element = $session->getPage()->find(
@@ -262,9 +293,9 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
     }
 
             /**
-     * @When I filled the type :field field with :value
+     * @When I fill the input of type :type with the value :value
      */
-    public function IfilledTheTypeFieldWithValue($field, $value)
+    public function InputTypeValue($field, $value)
     {
         $session = $this->getSession();
         $element = $session->getPage()->find(
@@ -275,9 +306,9 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
     }
 
             /**
-     * @When I filled the placeholder :field field with :value
+     * @When I fill the input of placeholder :placeholder with the value :value
      */
-    public function IfilledThePlaceholderFieldWithValue($field, $value)
+    public function InputPlaceholderValue($field, $value)
     {
         $session = $this->getSession();
         $element = $session->getPage()->find(
@@ -287,11 +318,24 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
         $element->setValue($value);
     }
 
+                /**
+     * @When I fill the input of name :name with the value :value
+     */
+    public function InputNameValue($field, $value)
+    {
+        $session = $this->getSession();
+        $element = $session->getPage()->find(
+            'xpath',
+            $session->getSelectorsHandler()->selectorToXpath('xpath', "//name[@placeholder='{$field}']")
+        );
+        $element->setValue($value);
+    }
+
 
     /**
-     * @When I filled the placeholder :field and class :class field with :value
+     * @When I fill the input of placeholder :placeholder and class :class with the value :value
      */
-    public function IfilledThePlaceholderFieldAndClassFieldWithValue($field , $field2 , $value)
+    public function InputPlaceholderClassValue($field , $field2 , $value)
     {
         $session = $this->getSession();
         $element = $session->getPage()->find(
@@ -302,9 +346,11 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
     }
 
         /**
-     * @When I filled the aria-describedby :field and class :class field with :value
+     * @When I fill the input of aria-describedby :aria-describedby and class :class with the value :value
+     * 
+     * 
      */
-    public function IfilledTheAriaDescribedbyFieldAndClassFieldWithValue($field , $field2 , $value)
+    public function InputAriaClassValue($field , $field2 , $value)
     {
         $session = $this->getSession();
         $element = $session->getPage()->find(
@@ -315,9 +361,9 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
     }
 
                 /**
-     * @When I filled the arial-label :field field with :value
+     * @When I fill the input of aria-label :aria-label with the value :value
      */
-    public function IfilledTheAriallabelFieldWithValue($field, $value)
+    public function InputArialabelValue($field, $value)
     {
         $session = $this->getSession();
         $element = $session->getPage()->find(
@@ -328,9 +374,10 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
     }
 
         /**
-     * @When I filled the arial-label :field and class :class field with :value
+     * @When I fill the input of aria-label :aria-label and class : class with the value :value
+     * 
      */
-    public function IfilledTheArialLabelFieldAndClassFieldWithValue($field , $field2 , $value)
+    public function InputArialabelClassValue($field , $field2 , $value)
     {
         $session = $this->getSession();
         $element = $session->getPage()->find(
@@ -341,9 +388,9 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
     }
 
             /**
-     * @When I filled the arial-label :field and placeholder :placeholder field with :value
+     * @When I fill the input of aria-label :aria-label and placeholder : placeholder with the value :value
      */
-    public function IfilledTheArialLabelFieldAndPlaceholderFieldWithValue($field , $field2 , $value)
+    public function InputArialabelPlaceholderValue($field , $field2 , $value)
     {
         $session = $this->getSession();
         $element = $session->getPage()->find(
@@ -405,6 +452,20 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
         $element = $session->getPage()->find(
             'xpath',
             $session->getSelectorsHandler()->selectorToXpath('xpath', "//button[@data-toggle='{$arg1}']")
+        );
+        $element->click();
+    }
+
+                            /**
+     * @When I click button with type :arg1
+     */
+    public function iClickButtonWithType($arg1)
+    {
+
+        $session = $this->getSession();
+        $element = $session->getPage()->find(
+            'xpath',
+            $session->getSelectorsHandler()->selectorToXpath('xpath', "//button[@type='{$arg1}']")
         );
         $element->click();
     }
@@ -706,19 +767,6 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
         }
     }
 
-                    /**
-     * @When I filled the class,textarea :field field with :value
-     */
-    public function IfilledTheClassTextAreaFieldWithValue($field, $value)
-    {
-        $session = $this->getSession();
-        $element = $session->getPage()->find(
-            'xpath',
-            $session->getSelectorsHandler()->selectorToXpath('xpath', "//textarea[@class='{$field}']")
-        );
-        $element->setValue($value);
-    }
-
     	/**
 	 * @Given /^I scroll to the bottom$/
 	 */
@@ -854,7 +902,45 @@ public function takeScreenShotAfterFailedStep(afterStepScope $scope) {
   {
     $this->getSession()->resizeWindow(768, 900, 'current');
   }
-  
+
+
+    /**
+     * @when /^(?:|I )confirm the popup$/
+     */
+    public function confirmPopup()
+    {
+        $this->getSession()->getDriver()->getWebDriverSession()->accept_alert();
+    }
+
+    /**
+     * @when /^(?:|I )cancel the popup$/
+     */
+    public function cancelPopup()
+    {
+        $this->getSession()->getDriver()->getWebDriverSession()->dismiss_alert();
+    }
+
+    /**
+     * @When /^(?:|I )should see "([^"]*)" in popup$/
+     *
+     * @param string $message The message.
+     *
+     * @return bool
+     */
+    public function assertPopupMessage($message)
+    {
+        return $message == $this->getSession()->getDriver()->getWebDriverSession()->getAlert_text();
+    }
+
+    /**
+     * @When /^(?:|I )fill "([^"]*)" in popup$/
+     *
+     * @param string $message The message.
+     */
+    public function setPopupText($message)
+    {
+        $this->getSession()->getDriver()->getWebDriverSession()->postAlert_text($message);
+    }
 
 
 }

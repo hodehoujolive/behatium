@@ -4,7 +4,7 @@ default:
   suites:
     ui:
       paths:
-        features: features/myFeatures/
+        features: features/automationpractice/
       contexts:
         - 'FeatureContext':
         - 'WebContext':
@@ -20,7 +20,7 @@ default:
           output_path: '%paths.base%/reports'
   extensions:
       Behat\MinkExtension:
-        base_url: https://getbootstrap.com/
+        base_url: http://practice.automationtesting.in/shop/
         browser_name: firefox
         default_session: goutte
         show_cmd: 'open %s'
