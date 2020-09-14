@@ -281,6 +281,19 @@ class WebContext extends MinkContext implements SnippetAcceptingContext
         $element->setValue($value);
     }
 
+        /**
+     * @When I fill the textarea of placeholder :placeholder with the value :value
+     *
+     */
+    public function TextareaPlaceholderValue($field, $value)
+    {
+        $session = $this->getSession();
+        $element = $session->getPage()
+            ->find('xpath', $session->getSelectorsHandler()
+            ->selectorToXpath('xpath', "//textarea[@placeholder='{$field}']"));
+        $element->setValue($value);
+    }
+
     /**
      * @When I fill the input of id :id with the value :value
      */
@@ -302,6 +315,18 @@ class WebContext extends MinkContext implements SnippetAcceptingContext
         $element = $session->getPage()
             ->find('xpath', $session->getSelectorsHandler()
             ->selectorToXpath('xpath', "//input[@type='{$field}']"));
+        $element->setValue($value);
+    }
+
+        /**
+     * @When I fill the input of value :arg1 with the value :arg2
+     */
+    public function iFillTheInputOfValueWithTheValue($arg1, $arg2)
+    {
+        $session = $this->getSession();
+        $element = $session->getPage()
+            ->find('xpath', $session->getSelectorsHandler()
+            ->selectorToXpath('xpath', "//input[@value='{$field}']"));
         $element->setValue($value);
     }
 
@@ -403,6 +428,20 @@ class WebContext extends MinkContext implements SnippetAcceptingContext
             ->find('xpath', $session->getSelectorsHandler()
             ->selectorToXpath('xpath', "//button[@class='{$arg1}']"));
         $element->click();
+    }
+
+        /**
+     * @When I click button with id :id and type :type
+     */
+    public function iClickButtonWithIdAndType($arg1, $arg2)
+    {
+
+        $session = $this->getSession();
+        $element = $session->getPage()
+            ->find('xpath', $session->getSelectorsHandler()
+            ->selectorToXpath('xpath', "//button[@id='{$arg1}'][@type='{$arg2}']"));
+        $element->click();
+
     }
 
     /**
@@ -577,6 +616,20 @@ class WebContext extends MinkContext implements SnippetAcceptingContext
         $element = $session->getPage()
             ->find('xpath', $session->getSelectorsHandler()
             ->selectorToXpath('xpath', "//input[@type='{$arg1}'][@name='{$arg2}'][@id='{$arg3}']"));
+        $element->click();
+
+    }
+
+        /**
+     * @When I click input with type :type and name :name
+     */
+    public function iClickInputWithTypeAndName($arg1, $arg2)
+    {
+
+        $session = $this->getSession();
+        $element = $session->getPage()
+            ->find('xpath', $session->getSelectorsHandler()
+            ->selectorToXpath('xpath', "//input[@type='{$arg1}'][@name='{$arg2}']"));
         $element->click();
 
     }
@@ -953,6 +1006,60 @@ class WebContext extends MinkContext implements SnippetAcceptingContext
             ->getWebDriverSession()
             ->postAlert_text($message);
     }
+
+        /**
+     * @When I click div with class :class
+     */
+    public function iClickDivWithClass($arg1)
+    {
+
+        $session = $this->getSession();
+        $element = $session->getPage()
+            ->find('xpath', $session->getSelectorsHandler()
+            ->selectorToXpath('xpath', "//div[@class='{$arg1}']"));
+        $element->click();
+
+    }
+
+        /**
+     * @When I click div with role :role and class :class
+     */
+    public function iClickDivWithRoleAndClass($arg1, $arg2)
+    {
+
+        $session = $this->getSession();
+        $element = $session->getPage()
+            ->find('xpath', $session->getSelectorsHandler()
+            ->selectorToXpath('xpath', "//div[@role='{$arg1}'][@class='{$arg2}']"));
+        $element->click();
+
+    }
+
+    /**
+     * @When I press enter key in input of placeholder :placeholder
+     */
+    public function PressEnterInputPlaceholder($arg1)
+    {
+        $session = $this->getSession();
+        $element = $session->getPage()
+            ->find('xpath', $session->getSelectorsHandler()
+            ->selectorToXpath('xpath', "//input[@placeholder='{$arg1}']"));
+        $element->submit();
+    }
+
+        /**
+     * @When I click left mouse in input of placeholder :placeholder
+     */
+    public function PressLeftMouseInputPlaceholder($arg1)
+    {
+        $session = $this->getSession();
+        $element = $session->getPage()
+            ->find('xpath', $session->getSelectorsHandler()
+            ->selectorToXpath('xpath', "//input[@placeholder='{$arg1}']"));
+        $element->click();
+    }
+
+    
 
 }
 
