@@ -1062,4 +1062,3 @@ class WebContext extends MinkContext implements SnippetAcceptingContext
     
 
 }
-
