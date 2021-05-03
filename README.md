@@ -1,4 +1,4 @@
-# behat-starter-kit
+# behatium
 **Pour des références supplémentaires, veuillez consulter [source](https://gitlab.com/openware/automatisation-des-tests/-/edit/developer/features/bootstrap/WebContext.php)**
 
 Utilise Mink pour lancer et manipuler Selenium Server.
@@ -724,3 +724,18 @@ And I should see "alert" in popup
 ```
 When I fill "prompt" in popup
 ```
+
+### Twig report
+
+![Twig Screenshot](https://github.com/hodehoujolive/Elkan-Formatter/blob/main/1report.png)
+
+![Twig Screenshot](https://github.com/hodehoujolive/Elkan-Formatter/blob/main/2report.png)
+
+![Twig Screenshot](https://github.com/hodehoujolive/Elkan-Formatter/blob/main/3reports.png)
+
+## It's easy!!
+
+* This tool can be installed easily with composer.
+* Defining the formatter in the `behat.yml` file
+* Modifying the settings in the `behat.yml`file
+
