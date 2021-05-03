@@ -37,7 +37,7 @@ Ensuite à la racine `vendor/bin/behat`
 
 * Maintainer: **jolive.hodehou**
 * Stability: **stable**
-* Contact: jolive.hodehou@openware.online
+* Contact: jolivehodehou7@gmail.com
 * relies on [Mink](http://mink.behat.org)
 
 ## Configuration
